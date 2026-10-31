@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "partials/coming_soon.html" import coming_soon_card %}
+{% from "partials/post_card.html" import post_card %}
+{% from "partials/category_tree.html" import category_tree %}
+
+{% block content %}
+<section class="text-center py-6 md:py-10">
+  <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">Zdrowe jedzenie prosto od rolnika</h1>
+  <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+    polskiprimal.pl — analizy składników, lokalni rolnicy, dieta primal i keto,
+    zdrowe listy zakupów i więcej. Strona jest w budowie, ale zawartość pojawia się
+    na bieżąco.
+  </p>
+</section>
+
+<section class="mt-6" aria-labelledby="recent-heading">
+  <div class="flex items-baseline justify-between mb-4">
+    <h2 id="recent-heading" class="text-2xl font-semibold">Najnowsze wpisy</h2>
+    <a href="/blog" class="text-sm font-medium text-primary hover:underline">Wszystkie wpisy →</a>
+  </div>
+  {% if posts %}
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {% for post in posts %}{{ post_card(post) }}{% endfor %}
+  </div>
+  {% else %}
+  <p class="text-gray-500">Pierwsze wpisy pojawią się już wkrótce.</p>
+  {% endif %}
+</section>
+
+{% if categories %}
+<section class="mt-10" aria-labelledby="categories-heading">
+  <h2 id="categories-heading" class="text-2xl font-semibold mb-4">Kategorie</h2>
+  <div class="bg-white rounded-lg shadow p-6">{{ category_tree(categories) }}</div>
+</section>
+{% endif %}
+
+<section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+  {{ coming_soon_card("Składniki produktów", "Katalog produktów z Biedronki, Lidla i Dino wraz z analizą wartości odżywczych.") }}
+  {{ coming_soon_card("Kalendarz rolników", "Sprawdź, kiedy i gdzie lokalni rolnicy będą na targu, i zarezerwuj produkty.") }}
+  {{ coming_soon_card("Primal i Keto", "Wiedza o diecie primal i keto oraz lista zweryfikowanych restauracji.") }}
+</section>
+{% endblock %}

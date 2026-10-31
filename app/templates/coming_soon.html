@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% from "partials/coming_soon.html" import coming_soon_card %}
+
+{% block content %}
+<div class="max-w-xl mx-auto">
+  {{ coming_soon_card(feature_title, feature_text) }}
+  <p class="mt-6 text-center"><a href="/" class="text-primary hover:underline">← Wróć na stronę główną</a></p>
+</div>
+{% endblock %}

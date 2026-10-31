@@ -1,0 +1,77 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Scaffold the FastAPI project and one-command run": [
+      {
+        "executionId": "7d1af607-662a-4cc8-acb2-d84f36562858",
+        "chatSessionId": "sess_76b6ea77-7167-4ec3-99d1-38ac19073092",
+        "timestamp": 1793374149463
+      },
+      {
+        "executionId": "7d1af607-662a-4cc8-acb2-d84f36562858",
+        "chatSessionId": "sess_76b6ea77-7167-4ec3-99d1-38ac19073092",
+        "timestamp": 1793374502699
+      }
+    ],
+    "2. Define the StorageBackend interface and in-memory fake": [
+      {
+        "executionId": "70b9ea83-602e-4123-a4f0-7fc25f733a63",
+        "chatSessionId": "sess_aa072a4b-fb5c-4cf0-8fda-a0cdbd405dbb",
+        "timestamp": 1793374604715
+      },
+      {
+        "executionId": "70b9ea83-602e-4123-a4f0-7fc25f733a63",
+        "chatSessionId": "sess_aa072a4b-fb5c-4cf0-8fda-a0cdbd405dbb",
+        "timestamp": 1793374881085
+      }
+    ],
+    "3. Implement S3StorageBackend and backend selection": [
+      {
+        "executionId": "d272b0ce-47fe-4b15-8a36-8d4110caa719",
+        "chatSessionId": "sess_2679cc09-c1c5-4dd7-b9c4-bf8a89c98f75",
+        "timestamp": 1793374938377
+      },
+      {
+        "executionId": "d272b0ce-47fe-4b15-8a36-8d4110caa719",
+        "chatSessionId": "sess_2679cc09-c1c5-4dd7-b9c4-bf8a89c98f75",
+        "timestamp": 1793375241880
+      }
+    ],
+    "4. Define Pydantic models and content service": [
+      {
+        "executionId": "57026636-fe7c-4621-b323-c58b2b544b16",
+        "chatSessionId": "sess_87eb470e-3c8b-4bf0-8572-9dfee2537aec",
+        "timestamp": 1793375334608
+      },
+      {
+        "executionId": "57026636-fe7c-4621-b323-c58b2b544b16",
+        "chatSessionId": "sess_87eb470e-3c8b-4bf0-8572-9dfee2537aec",
+        "timestamp": 1793375518934
+      }
+    ],
+    "5. Public content pages, theming, 404 and \"coming soon\" (first launch milestone)": [
+      {
+        "executionId": "670c65b4-3529-46bf-86c5-4a558f20415b",
+        "chatSessionId": "sess_6c8d9898-e274-4227-815e-cf1f8f3093bd",
+        "timestamp": 1793375589482
+      },
+      {
+        "executionId": "670c65b4-3529-46bf-86c5-4a558f20415b",
+        "chatSessionId": "sess_6c8d9898-e274-4227-815e-cf1f8f3093bd",
+        "timestamp": 1793375873542
+      }
+    ],
+    "6. Deployment: Docker, Caddy, HTTPS, deploy guide (go live)": [
+      {
+        "executionId": "e5320b51-67a6-4bd9-a118-9ce5e5901f10",
+        "chatSessionId": "sess_bc7eee49-253b-41bd-b482-ec14c0c258c2",
+        "timestamp": 1793378466679
+      },
+      {
+        "executionId": "e5320b51-67a6-4bd9-a118-9ce5e5901f10",
+        "chatSessionId": "sess_bc7eee49-253b-41bd-b482-ec14c0c258c2",
+        "timestamp": 1793378763912
+      }
+    ]
+  }
+}

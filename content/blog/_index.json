@@ -1,0 +1,10 @@
+{
+  "posts": {
+    "post-witaj": {"slug": "witaj-na-polskiprimal", "title": "Witaj na polskiprimal.pl", "status": "published", "published_at": "2025-06-01T09:00:00Z"},
+    "post-sklad": {"slug": "jak-czytac-sklad-produktu", "title": "Jak czytać skład produktu", "status": "published", "published_at": "2025-06-05T09:00:00Z"},
+    "post-zakupy": {"slug": "zakupy-na-tydzien-szkielet-listy", "title": "Zakupy na tydzień: szkielet listy", "status": "published", "published_at": "2025-06-08T09:00:00Z"},
+    "post-indeks": {"slug": "czym-jest-indeks-glikemiczny", "title": "Czym jest indeks glikemiczny", "status": "published", "published_at": "2025-06-10T09:00:00Z"},
+    "post-cukier": {"slug": "pierwsze-dni-bez-cukru", "title": "Pierwsze dni bez cukru", "status": "published", "published_at": "2025-06-12T09:00:00Z"},
+    "post-szkic": {"slug": "szkic-analiza-nawozow", "title": "Szkic: analiza nawozów", "status": "draft", "published_at": null}
+  }
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="max-w-3xl mx-auto bg-white rounded-lg shadow p-6 md:p-8">
+  <nav class="text-sm text-gray-500 mb-4" aria-label="Okruszki">
+    <a href="/blog" class="hover:underline">Blog</a>
+    {% if category %}/ <a href="/kategorie/{{ category.slug }}" class="hover:underline">{{ category.title }}</a>{% endif %}
+  </nav>
+  <h1 class="text-3xl font-bold text-primary mb-2">{{ post.title }}</h1>
+  <p class="text-sm text-gray-500 mb-6">
+    {{ post.author }}{% if post.published_at %} · <time datetime="{{ post.published_at.date().isoformat() }}">{{ post.published_at | pl_date }}</time>{% endif %}
+  </p>
+  <div class="content-body">{{ body_html | safe }}</div>
+</article>
+{% endblock %}

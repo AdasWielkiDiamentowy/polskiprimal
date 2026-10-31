@@ -1,0 +1,32 @@
+# Never bake secrets or local state into the image
+.env
+.env.*
+!.env.example
+
+# VCS / editor / tooling
+.git
+.github
+.kiro
+.vscode
+.idea
+
+# Python
+.venv
+venv
+env
+__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+tests
+
+# Node / build output (rebuilt inside the image)
+node_modules
+app/static/css/tailwind.css
+
+# Deployment files are not needed inside the image
+Dockerfile
+docker-compose.yml
+Caddyfile
+DEPLOY.md
+README.md

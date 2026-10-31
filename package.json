@@ -1,0 +1,13 @@
+{
+  "name": "polskiprimal-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tailwind CSS build for polskiprimal.pl (Node is used only to build CSS).",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i frontend/tailwind.input.css -o app/static/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i frontend/tailwind.input.css -o app/static/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "~3.4.17"
+  }
+}

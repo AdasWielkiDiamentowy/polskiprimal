@@ -1,0 +1,10 @@
+{
+  "id": "post-sklad",
+  "slug": "jak-czytac-sklad-produktu",
+  "title": "Jak czytać skład produktu",
+  "category_id": "cat-skladniki",
+  "body_md": "## Kolejność ma znaczenie\n\nSkładniki na etykiecie wypisuje się **od najwięcej do najmniej**. Jeśli cukier jest na pierwszym lub drugim miejscu, produkt jest go pełen.\n\n## Na co patrzeć\n\n1. Długość listy. Im krótsza, tym zwykle mniej przetworzony produkt.\n2. Różne nazwy cukru: syrop glukozowo-fruktozowy, maltodekstryna, dekstroza.\n3. Dodatki do żywności oznaczone symbolem E.\n\n*Przykładowa treść.*",
+  "author": "Zespół polskiprimal.pl",
+  "status": "published",
+  "published_at": "2025-06-05T09:00:00Z"
+}

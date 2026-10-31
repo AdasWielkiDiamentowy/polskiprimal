@@ -1,0 +1,12 @@
+{% macro post_card(post) -%}
+<article class="bg-white rounded-lg shadow p-5 flex flex-col">
+  {% if post.published_at %}
+  <time class="text-xs text-gray-500" datetime="{{ post.published_at.date().isoformat() }}">{{ post.published_at | pl_date }}</time>
+  {% endif %}
+  <h3 class="text-lg font-semibold text-primary mt-1">
+    <a href="/blog/{{ post.slug }}" class="hover:underline">{{ post.title }}</a>
+  </h3>
+  <p class="text-xs text-gray-500 mt-1">{{ post.author }}</p>
+  <a href="/blog/{{ post.slug }}" class="mt-3 text-sm font-medium text-primary hover:underline">Czytaj dalej →</a>
+</article>
+{%- endmacro %}

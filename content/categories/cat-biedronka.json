@@ -1,0 +1,8 @@
+{
+  "id": "cat-biedronka",
+  "slug": "biedronka",
+  "title": "Biedronka",
+  "parent_id": "cat-skladniki",
+  "order": 1,
+  "description_md": "Analizy produktów dostępnych w sklepach Biedronka."
+}

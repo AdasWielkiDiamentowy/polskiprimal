@@ -1,0 +1,27 @@
+# Caddy reverse proxy for polskiprimal.pl
+#
+# SITE_ADDRESS (set in .env, passed through docker-compose.yml) decides the mode:
+#
+#   unset / "http://localhost"            -> plain HTTP on port 80, no certificates (local run)
+#   "polskiprimal.pl, www.polskiprimal.pl" -> Caddy gets and renews Let's Encrypt certificates
+#                                             automatically and redirects HTTP -> HTTPS
+#
+# Caddy only requests certificates for real domain names (not localhost / IPs / http:// sites).
+# Production needs the DNS records from DEPLOY.md and ports 80 + 443 open to the internet.
+
+{$SITE_ADDRESS:http://localhost} {
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# "app" is the FastAPI service from docker-compose.yml (not published to the host).
+	reverse_proxy app:8000 {
+		health_uri /health
+		health_interval 30s
+	}
+}

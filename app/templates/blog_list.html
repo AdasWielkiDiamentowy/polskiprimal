@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "partials/post_card.html" import post_card %}
+
+{% block content %}
+<h1 class="text-3xl font-bold text-primary mb-6">Blog</h1>
+{% if posts %}
+<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {% for post in posts %}{{ post_card(post) }}{% endfor %}
+</div>
+{% else %}
+<p class="text-gray-500">Pierwsze wpisy pojawią się już wkrótce.</p>
+{% endif %}
+{% endblock %}

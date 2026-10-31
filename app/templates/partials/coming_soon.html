@@ -1,0 +1,18 @@
+{#- Reusable "Wkrótce / Coming soon" pieces for unfinished areas (R1.3).
+    Usage:
+      {% from "partials/coming_soon.html" import coming_soon_badge, coming_soon_card %}
+      {{ coming_soon_badge() }}
+      {{ coming_soon_card("Tytuł", "Opis obszaru, który jeszcze powstaje.") }}
+-#}
+
+{% macro coming_soon_badge() -%}
+<span class="inline-block text-xs font-medium bg-accent text-white rounded px-2 py-1" data-coming-soon>Wkrótce</span>
+{%- endmacro %}
+
+{% macro coming_soon_card(title, text) -%}
+<div class="bg-white rounded-lg shadow p-6" data-coming-soon-card>
+  <h2 class="text-xl font-semibold text-primary mb-2">{{ title }}</h2>
+  <p class="text-gray-600 text-sm">{{ text }}</p>
+  <div class="mt-4">{{ coming_soon_badge() }}</div>
+</div>
+{%- endmacro %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% from "partials/category_tree.html" import category_tree %}
+
+{% block content %}
+<h1 class="text-3xl font-bold text-primary mb-6">Kategorie</h1>
+{% if categories %}
+<div class="bg-white rounded-lg shadow p-6">{{ category_tree(categories) }}</div>
+{% else %}
+<p class="text-gray-500">Kategorie pojawią się już wkrótce.</p>
+{% endif %}
+{% endblock %}

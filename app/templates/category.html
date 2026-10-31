@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "partials/post_card.html" import post_card %}
+
+{% block content %}
+<nav class="text-sm text-gray-500 mb-4" aria-label="Okruszki">
+  <a href="/kategorie" class="hover:underline">Kategorie</a>
+  {% for parent in view.breadcrumbs %}
+  / <a href="/kategorie/{{ parent.slug }}" class="hover:underline">{{ parent.title }}</a>
+  {% endfor %}
+  / <span class="text-gray-700">{{ view.category.title }}</span>
+</nav>
+
+<h1 class="text-3xl font-bold text-primary mb-4">{{ view.category.title }}</h1>
+{% if view.category.description_md %}
+<div class="content-body text-gray-700 mb-8">{{ view.category.description_md | markdown }}</div>
+{% endif %}
+
+{% if view.subcategories %}
+<section class="mb-8" aria-labelledby="subcategories-heading">
+  <h2 id="subcategories-heading" class="text-xl font-semibold mb-3">Podkategorie</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {% for sub in view.subcategories %}
+    <a href="/kategorie/{{ sub.slug }}" class="block bg-white rounded-lg shadow p-5 hover:shadow-md">
+      <span class="font-semibold text-primary">{{ sub.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section aria-labelledby="topics-heading">
+  <h2 id="topics-heading" class="text-xl font-semibold mb-3">Tematy</h2>
+  {% if view.topics %}
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {% for post in view.topics %}{{ post_card(post) }}{% endfor %}
+  </div>
+  {% else %}
+  <p class="text-gray-500">Tematy w tej kategorii pojawią się już wkrótce.</p>
+  {% endif %}
+</section>
+{% endblock %}
