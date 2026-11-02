@@ -51,6 +51,13 @@ class Settings(BaseSettings):
     PRZELEWY24_MERCHANT_ID: str | None = None
     PRZELEWY24_API_KEY: str | None = None
 
+    # --- Media / images ---
+    # Base URL for user-uploaded images. Point to your public S3 bucket (Option A)
+    # or CloudFront CDN (Option B). Leave empty to disable images gracefully.
+    # Example S3:         https://polskiprimal-data.s3.eu-central-1.amazonaws.com
+    # Example CloudFront: https://cdn.polskiprimal.pl
+    MEDIA_BASE_URL: str = ""
+
     @property
     def is_prod(self) -> bool:
         return self.APP_ENV == "prod"

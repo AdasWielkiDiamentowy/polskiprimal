@@ -16,6 +16,7 @@ from fastapi import Request
 from fastapi.templating import Jinja2Templates
 from markupsafe import Markup
 
+from app.config import get_settings
 from app.deps import get_storage
 from app.models.theme import ThemeConfig
 from app.services.content_service import render_markdown
@@ -63,6 +64,7 @@ def tailwind_css_url() -> str | None:
 templates = Jinja2Templates(directory=str(TEMPLATES_DIR))
 templates.env.globals["site_name"] = "polskiprimal.pl"
 templates.env.globals["tailwind_css_url"] = tailwind_css_url
+templates.env.globals["media_base_url"] = get_settings().MEDIA_BASE_URL.rstrip("/")
 templates.env.filters["pl_date"] = pl_date
 templates.env.filters["markdown"] = markdown_filter
 

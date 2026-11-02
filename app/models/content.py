@@ -15,6 +15,7 @@ class Category(BaseModel):
     parent_id: str | None = None  # multi-level tree (R3.1)
     order: int = 0
     description_md: str = ""
+    image_url: str | None = None  # optional cover/thumbnail image
 
 
 class BlogPost(BaseModel):
@@ -28,3 +29,4 @@ class BlogPost(BaseModel):
     author: str
     status: Literal["draft", "published"] = "draft"  # (R3.5)
     published_at: datetime | None = None
+    image_url: str | None = None  # optional cover image
