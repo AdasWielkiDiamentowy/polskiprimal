@@ -94,18 +94,35 @@ zatwierdzone treści z GitHub na żywą stronę (do S3).
 
 ### Uwaga o nadpisywaniu — bardzo ważne
 
+#### Dlaczego w ogóle jest ten podział?
+
+Wyobraź sobie, że S3 to witryna sklepowa — to, co widzą klienci.
+Git to magazyn z zapasami — tu przechowujesz oryginały.
+
+Komenda `seed` bez żadnych opcji pyta S3: „czy ten plik już masz?" — i jeśli tak, **omija go**.
+Dlaczego? Bo w S3 mogły być zmiany zrobione ręcznie przez kogoś innego, a `seed` nie chce ich
+przypadkowo zniszczyć. To bezpieczne domyślne zachowanie.
+
+Problem: gdy **zmieniłaś/eś istniejący plik** (np. dodałaś/eś podkategorie do `cat-biedronka.json`),
+zwykłe `seed` widzi, że plik już istnieje w S3 i go **pomija** — dlatego napisało „0 objects wrote".
+Twoja zmiana była w Git, ale nie trafiła do S3, bo S3 już miał starą wersję tego pliku.
+
+**Rozwiązanie — flaga `--overwrite`:**
+Mówi komendzie: „nie pytaj, czy plik już istnieje — zastąp wszystko wersjami z Git".
+
 ```bash
-docker compose exec app python -m app.seed              # BEZPIECZNE: dodaje tylko nowe pliki
-docker compose exec app python -m app.seed --overwrite  # NADPISUJE istniejące w S3
+docker compose exec app python -m app.seed              # BEZPIECZNE: dodaje tylko NOWE pliki (istniejące pomija)
+docker compose exec app python -m app.seed --overwrite  # NADPISUJE wszystko w S3 wersjami z Git
 ```
 
-- Zwykłe `seed` **nigdy nie nadpisze** tego, co już jest w S3 — dodaje tylko brakujące obiekty.
-- `--overwrite` **zastąpi** obiekty w S3 wersjami z repo. Jeśli ktoś edytował coś
-  bezpośrednio w S3, te zmiany zostaną **utracone**. Używaj świadomie, gdy chcesz, żeby
-  wersja z Git była źródłem prawdy.
+**Kiedy używać czego:**
+- Dodajesz **nowy** plik (nowy wpis, nowa kategoria) → zwykłe `seed` wystarczy
+- **Zmieniłaś/eś istniejący** plik (edytowałaś/eś np. `cat-biedronka.json`) → musisz użyć `--overwrite`
+- Nie jesteś pewna/pewny, które pliki są nowe, a które zmienione → `--overwrite` jest bezpieczny,
+  **o ile trzymasz się zasady że treść zmieniasz tylko w Git**, nie ręcznie w S3
 
-> Dlatego trzymamy się zasady: **treść zmieniamy w Git, nie bezpośrednio w S3.** Wtedy
-> `--overwrite` jest bezpieczny, bo Git zawsze ma najnowszą, poprawną wersję.
+> Złota zasada: **zmień w Git → wyślij na GitHub → na serwerze `git pull` + `seed --overwrite`**.
+> Wtedy `--overwrite` nigdy niczego nie zniszczy, bo Git jest jedynym źródłem prawdy.
 
 ---
 
@@ -243,6 +260,9 @@ slashes for folders: /
 ❌ no spaces
 ❌ no uppercase
 docker compose up -d --build
-docker compose exec app python -m app.seed
+docker compose exec app python -m app.seed --overwrite  # dodaje nowe I aktualizuje zmienione
 curl -I https://polskiprimal.pl/health
 ```
+
+> Jeśli dopiero dodajesz nowe pliki (nic nie edytowałaś/eś), możesz pominąć `--overwrite`.
+> W razie wątpliwości — `--overwrite` jest bezpieczny, gdy trzymasz się zasady „tylko Git, nie S3 ręcznie".
