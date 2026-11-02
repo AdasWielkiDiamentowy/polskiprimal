@@ -4,5 +4,6 @@
   "title": "Mleko",
   "parent_id": "cat-biedronka-nabial",
   "order": 1,
-  "description_md": "Analiza mleka dostępnego w Biedronce."
+  "description_md": "Analiza mleka dostępnego w Biedronce.",
+  "image_url": "images/mlekopiatnica.jpg"
 }
