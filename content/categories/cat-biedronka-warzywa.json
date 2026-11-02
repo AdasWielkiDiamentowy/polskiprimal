@@ -1,0 +1,8 @@
+{
+  "id": "cat-biedronka-warzywa",
+  "slug": "biedronka-warzywa",
+  "title": "Warzywa",
+  "parent_id": "cat-biedronka",
+  "order": 3,
+  "description_md": "Analiza warzyw dostępnych w Biedronce."
+}

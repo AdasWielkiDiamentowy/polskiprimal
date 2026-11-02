@@ -1,3 +1,17 @@
 {
-  "ids": ["cat-skladniki", "cat-biedronka", "cat-zakupy", "cat-keto", "cat-cukier"]
+  "ids": [
+    "cat-skladniki",
+    "cat-biedronka",
+    "cat-biedronka-mieso",
+    "cat-biedronka-nabial",
+    "cat-biedronka-nabial-mleko",
+    "cat-biedronka-nabial-twarozek",
+    "cat-biedronka-nabial-gouda",
+    "cat-biedronka-nabial-maslo",
+    "cat-biedronka-nabial-skyr",
+    "cat-biedronka-warzywa",
+    "cat-zakupy",
+    "cat-keto",
+    "cat-cukier"
+  ]
 }

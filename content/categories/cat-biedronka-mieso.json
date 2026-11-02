@@ -1,0 +1,8 @@
+{
+  "id": "cat-biedronka-mieso",
+  "slug": "biedronka-mieso",
+  "title": "Mięso",
+  "parent_id": "cat-biedronka",
+  "order": 1,
+  "description_md": "Analiza mięsa dostępnego w Biedronce."
+}
