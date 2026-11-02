@@ -211,6 +211,37 @@ git push
 ```bash
 cd polskiprimal
 git pull
+
+
+
+## 8 - Pisanie w json
+Structure
+
+{ } — curly braces wrap the whole object
+"key": "value" — every field is a key-value pair
+, — comma after every line except the last one
+Values
+
+"text" — text always in double quotes
+1 — numbers without quotes
+null — empty/missing value, no quotes
+true / false — boolean, no quotes
+Text content (body_md field)
+
+\n — new line
+\n\n — empty line (paragraph break)
+**bold** — bold text
+## Nagłówek — heading
+- punkt — bullet point
+File and folder names in S3 (image_url)
+
+only lowercase letters: a-z
+numbers: 0-9
+hyphens: -
+slashes for folders: /
+❌ no Polish characters: ą ę ó ł ź ż ć ń ś
+❌ no spaces
+❌ no uppercase
 docker compose up -d --build
 docker compose exec app python -m app.seed
 curl -I https://polskiprimal.pl/health
