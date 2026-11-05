@@ -6,7 +6,18 @@
   "order": 1,
   "description_md": [
     "Analiza mleka dostępnego w Biedronce.",
-    "Opis mleka pasteryzowanego i mikrofiltrowanego trzeba zacząć, od wyjaśnienia czym jest pasteryzacja i mikrofiltracja."
+    "Opis mleka pasteryzowanego i mikrofiltrowanego trzeba zacząć, od wyjaśnienia czym jest pasteryzacja i mikrofiltracja.",
+    "Pasteryzacja polega na podgrzaniu mleka do temperatury w której zabija się 99.99% szkodliwych bakterii.",
+    "Ich szkodliwość jest sporna, co zostało wyjaśnione w sekcji Primal, lecz tutaj skupmimy się na ogólnoprzyjętych zasadach",
+    "Mamy zasadniczo 2 rodzaje pasteryzacji:",
+    "",
+    "- Długotrwała, 30 min w wannie, około 60-65°C ",
+    "",
+    "- Krótkotrwała, zabawne, tylko 15 sekund w około 70-80°C i cyk, gotowe",
+    "",
+    "Dzięki temu zabija się bakterie powodujące psucie się mleka i możemy cieszyć się tą białą cieczą dłużej :)"
+
+  
   ],
   "image_url": "images/category/Biedronka/Nabial/mlekopiatnicatitle.jpg"
 }

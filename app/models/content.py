@@ -26,7 +26,19 @@ class Category(BaseModel):
         descriptions as a JSON array without escaping \\n manually.
         """
         if isinstance(v, list):
-            return "\n\n".join(str(item) for item in v)
+            # Empty string "" = paragraph break.
+            # Non-empty strings next to each other = same paragraph (joined with space).
+            paragraphs: list[list[str]] = [[]]
+            for item in v:
+                if str(item).strip() == "":
+                    paragraphs.append([])
+                else:
+                    paragraphs[-1].append(str(item))
+            return "\n\n".join(
+                " ".join(sentences)
+                for sentences in paragraphs
+                if sentences
+            )
         return v
 
 
