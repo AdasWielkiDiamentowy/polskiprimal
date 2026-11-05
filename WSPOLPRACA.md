@@ -91,6 +91,10 @@ zatwierdzone treści z GitHub na żywą stronę (do S3).
 | 4. Opublikuj do S3 (dodaj nowe) | `docker compose exec app python -m app.seed` | wgrywa **tylko nowe** pliki; **nie nadpisuje** istniejących |
 | 5. Sprawdź, że żyje | `curl -I https://polskiprimal.pl/health` | `200` = działa |
 | 6. Sprawdź logi (jeśli coś nie tak) | `docker compose logs --tail=30 app` | pokaże ewentualny błąd S3 |
+| 7. cd ~/polskiprimal
+| 8. git pull
+| 9. aws s3 sync content/ s3://polskiprimal/ --region eu-north-1
+
 
 ### Uwaga o nadpisywaniu — bardzo ważne
 
