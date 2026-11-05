@@ -26,7 +26,7 @@ class Category(BaseModel):
         descriptions as a JSON array without escaping \\n manually.
         """
         if isinstance(v, list):
-            return "\n".join(str(item) for item in v)
+            return "\n\n".join(str(item) for item in v)
         return v
 
 
