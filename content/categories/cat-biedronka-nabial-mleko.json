@@ -6,7 +6,8 @@
   "order": 1,
   "description_md": [
     "Analiza mleka dostępnego w Biedronce.",
-    "Opis mleka pasteryzowanego i mikrofiltrowanego trzeba zacząć, od wyjaśnienia czym jest pasteryzacja i mikrofiltracja.",
+    "",
+    "Opis mleka pasteryzowanego, mikrofiltrowanego i UHT" ,
     "Pasteryzacja polega na podgrzaniu mleka do temperatury w której zabija się 99.99% szkodliwych bakterii.",
     "Ich szkodliwość jest sporna, co zostało wyjaśnione w sekcji Primal, lecz tutaj skupmimy się na ogólnoprzyjętych zasadach",
     "Mamy zasadniczo 2 rodzaje pasteryzacji:",
@@ -15,8 +16,17 @@
     "",
     "- Krótkotrwała, zabawne, tylko 15 sekund w około 70-80°C i cyk, gotowe",
     "",
-    "Dzięki temu zabija się bakterie powodujące psucie się mleka i możemy cieszyć się tą białą cieczą dłużej :)"
-
+    "Dzięki temu zabija się bakterie powodujące psucie się mleka i możemy cieszyć się tą białą cieczą dłużej :)",
+    "",
+    "Mikrofiltracja to proces oczyszczania mleka z drobnosutrojów - to coś jakby sitko z naprawde małymi oczkami,",
+    "przez które nie dostają się wielkie i niegrzeczne drobnoustroje",
+    "",
+    "UHT - mleko poddane obróbce cieplnej (135-150°C) na kilka sekund. Porównałbym je do wody zabarwionej na biało z dodatkiem tłuszczu, cukru, białka i kilku szczypt sproszkowanych ",
+    "witamin...mniam. No i spróbuj włożyc palec do zbiornika z wodą podgrzaną do 135 stopni na 3 sekundy i zobacz co ",
+    "z niego zostanie... Ale nie sugeruj się tym co właśnie powiedziałem, szanowni naukowcy udowodnili, że podczas tego procesu"
+    "straty w witaminach są znikome.",
+    "",
+    "To zasadniczo wszystko co musisz wiedzieć o mleku z każdego sklepu."
   
   ],
   "image_url": "images/category/Biedronka/Nabial/mlekopiatnicatitle.jpg"
