@@ -54,3 +54,25 @@ class BlogPost(BaseModel):
     status: Literal["draft", "published"] = "draft"  # (R3.5)
     published_at: datetime | None = None
     image_url: str | None = None  # optional cover image
+
+    @field_validator("body_md", mode="before")
+    @classmethod
+    def coerce_list_to_str(cls, v: Union[str, list]) -> str:
+        """Accept either a plain string or a list of strings.
+
+        Empty string "" = paragraph break.
+        Non-empty strings next to each other = same paragraph (joined with space).
+        """
+        if isinstance(v, list):
+            paragraphs: list[list[str]] = [[]]
+            for item in v:
+                if str(item).strip() == "":
+                    paragraphs.append([])
+                else:
+                    paragraphs[-1].append(str(item))
+            return "\n\n".join(
+                " ".join(sentences)
+                for sentences in paragraphs
+                if sentences
+            )
+        return v
