@@ -6,6 +6,7 @@
     "post-indeks": {"slug": "czym-jest-indeks-glikemiczny", "title": "Czym jest indeks glikemiczny", "status": "published", "published_at": "2025-06-10T09:00:00Z"},
     "post-cukier": {"slug": "pierwsze-dni-bez-cukru", "title": "Pierwsze dni bez cukru", "status": "published", "published_at": "2025-06-12T09:00:00Z"},
     "post-szkic": {"slug": "szkic-analiza-nawozow", "title": "Szkic: analiza nawozów", "status": "draft", "published_at": null},
-    "post-fantasy-pamiec": {"slug": "fantasy-i-pamiec", "title": "Zapamiętywanie podczas czytania fantasy", "status": "draft", "published_at": null}
+    "post-fantasy-pamiec": {"slug": "fantasy-i-pamiec", "title": "Zapamiętywanie podczas czytania fantasy", "status": "draft", "published_at": null},
+    "post-UPF": {"slug": "UPF", "title": "UPF", "status": "published", "published_at": "2026-11-10T09:00:00Z"}
   }
 }
